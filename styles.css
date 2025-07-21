@@ -1,0 +1,125 @@
+body{
+    background:#F7F7F9;
+    margin: 0;
+}
+/*Header*/
+.header {
+    background:linear-gradient(#328053,#0A1A11);
+    padding: 80px 160px;
+}
+.header-nav {
+    position: relative;
+    background: #f0d481;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: bold;
+}
+.header-logo img{
+    height: 100px;
+    width: 115px;
+}
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    background: none;
+    border: none;
+    color: #145b3d;
+    cursor: pointer;
+}
+.menu-toggle:hover{
+    color: #328053;
+}
+.sub-menu{
+    position: absolute;
+    top:55px;
+    left:10px;
+    padding: 10px;
+    width: 200px;
+    height: fit-content;
+    display: none;
+    align-items: center;
+    border-radius: .2in;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #328053;
+    box-shadow: 0px 15px 38px rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 0px 10px 12px;
+}
+.option{
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color:#f0d481;
+    padding: 10px 0;
+}
+.option:hover{
+    background:#f0d481;
+    color:#328053;
+    border-radius: .2in;
+}
+.socials {
+    font-size: 4px;
+    display: flex;
+    gap:10px;
+}
+
+/*Body Attraction*/
+.body-attraction{
+    position: absolute;
+    top: 30vh;
+    width: 100%;
+    height: 70dvh;
+    background:linear-gradient(#328053,#0A1A11);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+.body-banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 1880px;
+    object-fit: cover;
+    z-index: 1;
+}
+.text-overlay {
+    font-family: Inter;
+    font-weight: bold;
+    text-align: right;
+    position: relative;
+    line-height: 10px;
+    z-index: 2;
+    top: 100px;
+    left: 50px;
+    padding: 0px 130px;
+    background: rgba(255, 255, 255, 0.25);
+    border:1q solid;
+    backdrop-filter: blur(5px);
+    transform: skewX(-15deg);
+    border-radius: 20px;
+    color: white;
+    text-shadow: 4px 4px#003516;
+}
+
+/* Text styles */
+.text-overlay .small {
+    font-size: 3em;
+}
+
+.text-overlay .medium {
+    font-size: 3.5em;
+}
+
+.text-overlay .large {
+    font-size: 4em;
+}
