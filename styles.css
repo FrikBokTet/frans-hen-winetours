@@ -25,33 +25,47 @@ body{
     height: 100px;
     width: 115px;
 }
-.menu-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    background: none;
-    border: none;
-    color: #145b3d;
+.hamburger {
+    display: block;
     cursor: pointer;
 }
-.menu-toggle:hover{
-    color: #328053;
+.bar{
+    display: block;
+    width: 25px;
+    height: 5px;
+    margin: 5px auto;
+    border-radius: 1in;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #328053;
+}
+.hamburger.active .bar:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(45deg);
+}
+.hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
 }
 .sub-menu{
-    position: absolute;
-    top:55px;
-    left:10px;
+    position: fixed;
+    top:160px;
+    left:-260px;
     padding: 10px;
     width: 200px;
     height: fit-content;
-    display: none;
+    display: flex;
     align-items: center;
     border-radius: .2in;
     justify-content: center;
     flex-direction: column;
     background-color: #328053;
     box-shadow: 0px 15px 38px rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 0px 10px 12px;
+    transition: 0.3s;
+}
+.sub-menu.active{
+    left: 160px;
 }
 .option{
     width: 100%;
@@ -73,53 +87,73 @@ body{
 
 /*Body Attraction*/
 .body-attraction{
-    position: absolute;
-    top: 30vh;
-    width: 100%;
-    height: 70dvh;
-    background:linear-gradient(#328053,#0A1A11);
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    overflow: hidden;
+    background: linear-gradient(#328053,#0A1A11);
+    box-sizing: border-box;
+    height: 70vh;
 }
 .body-banner{
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 90%;
-    width: 1880px;
-    object-fit: cover;
-    z-index: 1;
-}
-.text-overlay {
-    font-family: Inter;
-    font-weight: bold;
-    text-align: right;
     position: relative;
-    line-height: 10px;
-    z-index: 2;
-    top: 100px;
-    left: 50px;
-    padding: 0px 130px;
-    background: rgba(255, 255, 255, 0.25);
-    border:1q solid;
-    backdrop-filter: blur(5px);
-    transform: skewX(-15deg);
-    border-radius: 20px;
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+}
+.body-attraction img{
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.text-overlay{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap:2vw;
+    bottom: 120px;
+    left: 120px;
+    background: rgba(255, 255, 255, 0.2);
+    border:2.5q solid;
+    backdrop-filter: blur(3px);
+    border-radius: 15px;
+    padding: 2vw 3vw;
     color: white;
-    text-shadow: 4px 4px#003516;
+    max-width: 100%;
+    min-width: 40rem;
+    transform: skewX(-25deg);
+}
+.text-overlay p{
+    margin: -1rem 0;
+    transform: skewX(25deg);
+    text-align: right;
+    font-family: "Inter";
+    font-weight: bold;
+    text-shadow: 5px 4px 0 #003516
+}
+.small{
+    font-size: clamp(5rem, 4vw, 1.5rem);
+}
+.medium{
+    font-size: clamp(6rem, 5vw, 2.5rem);
+}
+.large{
+    font-size: clamp(7rem, 6vw, 3.5rem);
 }
 
-/* Text styles */
-.text-overlay .small {
-    font-size: 3em;
+.offers{
+    font-family: 'Inter';
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
 }
-
-.text-overlay .medium {
-    font-size: 3.5em;
+.offer-banner{
+    position: relative;
+    background: #E4F0E9;
 }
-
-.text-overlay .large {
-    font-size: 4em;
+.offer-banner img{
+    height: clamp(6vw ,4vw,2vw);
+}
+.offer-banner h1{
+    display: flex;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 60px;
+    color:#264127;
 }

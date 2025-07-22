@@ -1,13 +1,7 @@
-let subMenu = 
-document.querySelector(".sub-menu");
+const hamburger = document.getElementsByClassName('.hamburger');
+const subMenu = document.getElementsByClassName('.sub-menu');
 
-window.addEventListener("click", 
-  (e) => {
-    if (e.target.closest(".toggle"))
-    {
-      subMenu.style.display = "flex";
-    } else{
-      subMenu.style.display = "none";
-    }
-  }
-);
+ hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle("active");
+  subMenu.classList.toggle("active");
+});
