@@ -1,7 +1,9 @@
-const hamburger = document.getElementsByClassName('.hamburger');
-const subMenu = document.getElementsByClassName('.sub-menu');
+    document.addEventListener("DOMContentLoaded", function () {
+        const hamburger = document.querySelector(".hamburger");
+        const subMenu = document.querySelector(".sub-menu");
 
- hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle("active");
-  subMenu.classList.toggle("active");
-});
+        hamburger.addEventListener("click", function () {
+            hamburger.classList.toggle("active");
+            subMenu.classList.toggle("active");
+        });
+    });
