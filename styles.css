@@ -238,6 +238,24 @@ body{
 }
 
 /*3D Slider*/
+.services{
+    height: 60dvh;
+    background: #F7F7F9;
+    font-family: 'Inter';
+    color: #003516;
+    display: flex;
+    justify-content: space-evenly;
+}
+.service-ha, .service-btr{
+    background: #f0f0f0;
+    margin: 2rem;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+}
+.service-btr p, .service-ha p{
+    color: #f0d481;
+}
 
 /*Social Slider*/
 .social-slider{
