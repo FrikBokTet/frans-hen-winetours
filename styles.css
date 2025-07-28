@@ -21,6 +21,7 @@ body{
     font-size: 16px;
     font-family: 'Inter';
     font-weight: bold;
+    z-index: 2;
 }
 .header-logo img{
     height: 100px;
@@ -50,8 +51,8 @@ body{
     transform: translateY(-10px) rotate(-45deg);
 }
 .sub-menu{
-    position: absolute;
-    top:90px;
+    position: fixed;
+    top:160px;
     left:-560px;
     padding: 10px;
     width: 200px;
@@ -65,6 +66,7 @@ body{
     box-shadow: 0px 15px 38px rgba(0, 0, 0, .2), rgba(0, 0, 0, .2) 0px 10px 12px;
     transition: 0.3s;
     z-index: 2;
+    opacity: 0;
 }
 .sub-menu ul{
     margin: 0;
@@ -78,7 +80,8 @@ body{
     list-style: none;
 }
 .sub-menu.active{
-    left: 0px;
+    opacity: 100;
+    left: 160px;
 }
 .option{
     width: 100%;
@@ -93,7 +96,7 @@ body{
     border-radius: 10px;
 }
 .socials {
-    font-size: 12px;
+    font-size: 4px;
     display: flex;
     gap:10px;
 }
@@ -149,26 +152,31 @@ body{
 .large{
     font-size: clamp(7rem, 6vw, 3.5rem);
 }
-/*WE OFFER*/
-.offers{
+/*WE OFFER & ABOUT US(Banner)*/
+.offers,.about-us{
     font-family: 'Inter';
     font-weight: bold;
     margin: 0;
     padding: 0;
 }
-.offer-banner{
+.offer-banner,.about-banner{
     position: relative;
     background: #E4F0E9;
 }
-.offer-banner img{
+.offer-banner img, .about-banner img{
     height: clamp(6vw ,4vw,2vw);
 }
-.offer-banner h1{
+.offer-banner h1, .about-banner h1{
     display: flex;
     justify-content: center;
     text-transform: uppercase;
     font-size: 60px;
     color:#264127;
+}
+.about-banner p{
+    color: #264127;
+    text-align: center;
+    font-size: 2dvh;
 }
 .offer-items{
     font-size: 42px;
@@ -289,12 +297,9 @@ body{
 .footer-contact-us{
     font-family: 'Inter';
     color: #f0d481;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem 20dvh;
-    transform: translate(40rem,-24rem);
+    transform: translate(140dvh, -36dvh);
+    padding: 0;
+    width: fit-content;
 }
 .footer-logo{
     margin: 0;
@@ -330,4 +335,66 @@ body{
     display:flex;
     align-items: center;
     justify-content: center;
+}
+
+/*ABOUT US*/
+.about-us-content{
+    position: relative;
+    background: #F7F7F9;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    margin: 0;
+    padding: 20px 10dvh;
+}
+
+.about-us-text{
+    background: linear-gradient(#328053,#0A1A11);
+    font-family: 'LEMON MILK';
+    color: #f0d481;
+    padding: 5dvh;
+    border-radius: 20px;
+    height: 100%;
+    width: 65dvh;
+    height: 77dvh;
+    font-size: 1.5rem;
+    box-shadow: 5px 5px #0A1A11;
+}
+.about-us-content p{
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+.about-us-images{
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction:column;
+    gap:10px;
+    width: auto;
+}
+.landscape{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.landscape img{
+    height: 30dvh;
+    aspect-ratio: 16/9;
+}
+.small-image{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.small-image img{
+    height: 25dvh;
+    aspect-ratio: 1/1;
+}
+.about-us-images img{
+    width: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, .6);
 }
