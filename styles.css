@@ -599,7 +599,7 @@ body{
 }
 }
 
-@media (max-width:768px){
+@media (max-width:800px){
 
 .slider{
     display: grid;
@@ -651,10 +651,6 @@ body{
     font-size: 9dvh;
 }
 
-
-.about-us-images{
-
-}
 .about-us-text{
     height: 45dvh;
     width: 55dvh;
@@ -665,5 +661,100 @@ body{
 }
 .landscape img{
     height: 25dvh;
+}
+}
+
+@media (max-width:700px){
+.large{
+    font-size: 8dvh;
+}
+
+.slider{
+    padding: 2rem 10dvh;
+}
+
+.footer-logo{
+    padding: 0 9dvh;
+}
+.footer-menu{
+    transform: translate(-5dvh,1dvh);
+}
+.footer-contact-us{
+    transform: translate(15dvh,1.2dvh);
+}
+.policies{
+    font-size: .75rem;
+}
+
+.landscape img{
+    height: 20dvh;
+}
+.about-us-text{
+    width: 45dvh;
+}
+}
+
+@media (max-width:610px){
+.text-overlay{
+    height: 15dvh;
+}    
+.small{
+   font-size: 5dvh; 
+}
+.medium{
+    font-size: 6dvh;
+}
+.large{
+    font-size: 7dvh;
+}
+
+.offer-items img{
+    height: inherit;
+}
+.offer-items li{
+    height: 25dvh;
+}
+
+.btr{
+    transform: translate(-.4dvh,0);
+}
+.ha{
+    transform: translate(-.7rem,0);
+}
+
+.story{
+    margin: 5rem 3rem;
+}
+
+.slider{
+    padding: 2rem 5dvh;
+}
+
+.footer-logo{
+    padding: 0 4.3dvh;
+}
+.footer-menu{
+    transform: translate(-10dvh,1dvh);
+}
+.footer-contact-us{
+    transform: translate(10dvh,1.2dvh);
+}
+.policies{
+    font-size: .65rem;
+}
+
+.small-image img{
+    height: 15dvh;
+}
+.landscape img{
+    height: 18dvh;
+}
+.about-us-text{
+    height: 50dvh;
+    width: 40dvh;
+    transform: translate(.5rem);
+}
+.bottom-block{
+    padding: 5dvh 10dvh;
 }
 }
