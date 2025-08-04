@@ -1,6 +1,8 @@
 body{
     background:#F7F7F9;
     margin: 0;
+    padding: 0;
+    width: 100%;
 }
 /*Header*/
 .header {
@@ -186,6 +188,7 @@ body{
     font-size: 42px;
 }
 .offer-items ul{
+    padding: 0;
     display: flex;
     justify-content: space-evenly;
     list-style: none;
@@ -398,6 +401,7 @@ body{
     align-items: center;
     justify-content: space-evenly;
     list-style: none;
+    padding: 0;
 }
 .slider img{
     object-fit: cover;
@@ -410,21 +414,22 @@ body{
 /*Footer*/
 
 .footer{
+    margin: 0;
+    padding: 0;
     background: linear-gradient(#328053,#0A1A11);
     width: 100%;
-    height: 70dvh;
+    min-height: 71dvh;
     overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
 }
 .footer-contact-us{
     font-family: 'Inter';
     color: #f0d481;
-    transform: translate(140dvh, -36dvh);
-    padding: 0;
+    text-align: center;
     width: fit-content;
-}
-.footer-logo{
-    margin: 0;
-    padding: 0 100dvh 0 0;
 }
 .footer iframe{
     width: 40dvh;
@@ -437,10 +442,9 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     gap: 20px;
-    padding: 0 40dvh;
-    transform: translateY(-9.5rem);
+    padding: 0;
+    transform: translateY(4dvh);
 }
 .footer-menu a{
     text-decoration: none;
@@ -449,13 +453,14 @@ body{
     color: #f0d481;
 }
 .policies{
-    color: #fff;
-    transform: translateY(-25dvh);
+    position: absolute;
     font-size: 1.5dvh;
+    color: #fff;
     font-family: 'Inter';
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    transform: translateY(65dvh);
 }
 
 /*ABOUT US*/
@@ -591,11 +596,13 @@ body{
 
 @media (max-width:1800px){
 .footer-contact-us{
-    transform: translate(130dvh, -36dvh);
+ transform: none;
+ margin-top: 20px;
 }
 }
 
 @media (max-width:1100px){
+
 .social-slider{
     margin: 0;
     padding: 2rem 0;
@@ -614,7 +621,8 @@ body{
 }
 
 .footer-contact-us{
-    transform: translate(40rem, -21.8rem);
+    transform: none;
+    margin-top: 20px;
 }
 
 .portrait-gallery li{
@@ -647,6 +655,23 @@ body{
 }
 }
 
+@media (max-width: 1000px) {
+.footer {
+    flex-direction: column;
+    height: auto;
+    padding: 20px 0;
+}
+.footer-contact-us {
+    transform: none !important;
+}
+.footer-nav{
+    transform: translateY(17.5dvh);
+}
+.policies{
+    transform: translateY(2dvh);
+}
+}
+
 @media (max-width:900px){
 .text-overlay{
     max-width: 70%;
@@ -671,18 +696,14 @@ body{
 }
 
 .footer{
-    height: 100dvh;
+    height: auto;
 }
 .footer-contact-us{
     text-align: center;
-    transform: translate(26dvh,5dvh);
-}
-.footer-logo{
-    padding: 0 12rem;
-    left: 50%;
+    transform: none;
 }
 .footer-menu{
-    transform: translateY(2dvh);
+    transform: none;
 }
 .policies{
     transform: translate(0, 6dvh);
@@ -736,10 +757,11 @@ body{
 }
 
 .footer{
-    height: 102dvh;
+    height: auto;
+    padding: 20px 0;
 }
 .footer-logo{
-    padding: 0 14dvh;
+    padding: 0;
 }
 .footer-contact-us{
     transform: translate(20dvh,3dvh);
@@ -802,13 +824,15 @@ body{
 }
 
 .footer-logo{
-    padding: 0 9dvh;
+    padding: 0;
 }
 .footer-menu{
-    transform: translate(-5dvh,1dvh);
+    transform: none;
+    padding: 0;
 }
 .footer-contact-us{
-    transform: translate(15dvh,1.2dvh);
+ transform: none;
+ margin-top: 20px;
 }
 .policies{
     font-size: .75rem;
@@ -859,13 +883,14 @@ body{
 }
 
 .footer-logo{
-    padding: 0 4.3dvh;
+    padding: 0;
 }
 .footer-menu{
-    transform: translate(-10dvh,1dvh);
+    transform: none;
+    padding: 0;
 }
 .footer-contact-us{
-    transform: translate(10dvh,1.2dvh);
+ transform: none;
 }
 .policies{
     font-size: .65rem;
@@ -912,6 +937,208 @@ body{
 .socials{
     flex-direction: column;
 }
+}
+
+@media (max-width: 1024px) {
+  .text-overlay {
+    left: 8rem;
+    min-width: 60%;
+  }
+
+  .small {
+    font-size: 7dvh;
+  }
+
+  .medium {
+    font-size: 9dvh;
+  }
+
+  .large {
+    font-size: 11dvh;
+  }
+
+  .slider img {
+    width: 28dvh;
+    height: 28dvh;
+  }
+
+  .footer-contact-us {
+    transform: translate(30rem, -28dvh);
+  }
+
+  .about-us-text {
+    font-size: 1.15rem;
+  }
+
+  .portrait-gallery li {
+    height: 35dvh;
+  }
+
+  .portrait-gallery img {
+    height: 35dvh;
+  }
+
+  .landscape-gallery li {
+    height: 18dvh;
+  }
+
+  .landscape-gallery img {
+    height: 18dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 60px;
+  }
+
+  .header-logo img {
+    height: 70px;
+    width: 80px;
+  }
+
+  .text-overlay {
+    left: 3rem;
+    min-width: 70%;
+    padding: 1.5vw 2vw;
+  }
+
+  .small {
+    font-size: 4dvh;
+  }
+
+  .medium {
+    font-size: 6dvh;
+  }
+
+  .large {
+    font-size: 8dvh;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 30px 60px;
+  }
+
+  .header-logo img {
+    height: 70px;
+    width: 80px;
+  }
+
+  .text-overlay {
+    left: 3rem;
+    min-width: 70%;
+    padding: 1.5vw 2vw;
+  }
+
+  .small {
+    font-size: 4dvh;
+  }
+
+  .medium {
+    font-size: 6dvh;
+  }
+
+  .large {
+    font-size: 8dvh;
+  }
+}
+
+@media (max-width:480px){
+.header{
+    padding: 40px 80px;
+}
+.header-nav{
+    width: 25dvh;
+}
+.header-logo img{
+    height: 80px;
+    width: 90px;
+}
+
+.text-overlay{
+    left: 2dvh;
+    bottom: 80px;
+    min-width: 80%;
+}
+.small{
+    font-size: 2.5dvh;
+}
+.medium{
+    font-size: 3dvh;
+}
+.large{
+    font-size: 3.5dvh;
+}
+
+.offer-banner h1, .about-banner h1, .gallery-banner h1{
+    font-size: 40px;
+}
+.about-banner p{
+    font-size: 1.5dvh;
+}
+.offer-items ul{
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+.offer-items li{
+    height: 20dvh;
+}
+.offer-items img{
+    height: 20dvh;
+}
+.offer-items-text{
+    margin: -4rem 0;
+    flex-direction: column;
+    gap: 8rem;
+}
+.ha{
+    transform: translate(0,0);
+}
+.btr{
+    transform: translate(0,0);
+}
+.story{
+    margin: 3rem 1rem;
+    padding: 1rem;
+}
+.story h1{
+    font-size: 4dvh;
+}
+.story p{
+    font-size: 1rem;
+}
+.services{
+    height: 200dvh;
+}
+.service-ha, .service-btr{
+    width: 80%;
+    height: 60dvh;
+    margin: 1rem;
+    padding: 1rem;
+}
+.service-ha p, .service-btr p{
+    font-size: 1.2rem;
+}
+.service-ha h1, .service-btr h1{
+    font-size: 2rem;
+}
+.service-button{
+    font-size: 1.5rem;
+    padding: 0.5rem;
+}
+.prices{
+    flex-direction: column;
+    gap: 5rem;
+}
+.service-ha-price, .service-btr-price{
+    width: 80%;
+}
+}
+@media (max-width: 320px) {
+  /* Add styles for 320px breakpoint if needed */
 }
 
 @media (max-width:345px){
