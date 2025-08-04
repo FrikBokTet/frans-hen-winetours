@@ -180,7 +180,6 @@ body{
 }
 .offer-items{
     font-size: 42px;
-    color: #264127;
 }
 .offer-items ul{
     display: flex;
@@ -213,6 +212,14 @@ body{
     transform: translate(1rem,0px);
 }
 
+.ha a, .btr a{
+    text-decoration: none;
+    color: #264127;
+    transition: 0.3s;
+}
+.ha a:hover, .btr a:hover{
+    color: #328053;
+}
 /*Story*/
 .story{
     background: linear-gradient(#328053,#0A1A11);
@@ -247,7 +254,8 @@ body{
 
 /*3D Slider*/
 .services{
-    height: 60dvh;
+    position: relative;
+    height: 80dvh;
     background: #F7F7F9;
     font-family: 'Inter';
     color: #003516;
@@ -255,16 +263,125 @@ body{
     justify-content: space-evenly;
 }
 .service-ha, .service-btr{
-    background: #f0f0f0;
+    background:linear-gradient(#f0d481,#f0f0f0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
     margin: 2rem;
     padding: 2rem;
+    height: 70dvh;
+    width: 60dvh;
     border-radius: 20px;
-    box-shadow: 4px 4px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .2);
 }
 .service-btr p, .service-ha p{
-    color: #000000;
+    font-size:1.5rem;
+    color: #000;
+}
+.service-btr h1, .service-ha h1{
+    font-size:3rem;
+    text-align: center;
 }
 
+.service-button{
+    position: relative;
+    font-size: 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    background: #328053;
+    padding: 1rem;
+    color: #f0d481;
+    border-radius: 10px;
+    border:2px solid #0C200D;
+    transition: 0.4s;
+}
+
+.service-button:hover{
+    background: #f0d481;
+    color: #328053;
+    transform: translate(0,-1dvh);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, .6);
+}
+
+.prices{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 9.5rem;
+    pointer-events: none;
+}
+.prices > div{
+    position: relative;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+.service-ha-price, .service-btr-price{
+    background:linear-gradient(#328053,#f0f0f0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2rem;
+    padding: 2rem;
+    height: 70dvh;
+    width: 60dvh;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, .2);
+}
+.price.active{
+    pointer-events: auto;
+}
+.prices > div.active{
+    visibility: visible !important;
+    opacity: 1 !important;
+    pointer-events: auto !important;
+}
+.prices > div.closing {
+    opacity: 0;
+    pointer-events: none;
+}
+.service-ha-price h1, .service-btr-price h1{
+    color:#0A1A11;
+    text-align: center;
+}
+.service-ha-price h2, .service-btr-price h2{
+    color:#0A1A11;
+    font-size: 1.5rem;
+}
+.service-ha-price h3, .service-btr-price h3{
+    color: #000;
+    padding: 2rem;
+    border: 2px solid #0A1A11;
+    background-color: #f0d481;
+    border-radius: 20px;
+    font-size: 1.3rem;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, .6);
+}
+.close-button {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: transparent;
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    line-height: 1;
+    color: #0A1A11;
+    transition: 0.3s;
+}
+.close-button:hover{
+    color: #f0d481;
+}
+.note{
+    border: 0;
+    border-radius: 0;
+    color: red;
+    font-size: .7rem;
+}
 /*Social Slider*/
 .social-slider{
     margin: 0;
@@ -517,6 +634,13 @@ body{
     transform: translate(2rem);
     font-size: 1.17rem;
 }
+
+.services{
+    height: 140dvh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 }
 
 @media (max-width:900px){
@@ -756,5 +880,165 @@ body{
 }
 .bottom-block{
     padding: 5dvh 10dvh;
+}
+
+.service-ha, .service-btr{
+    width: 40dvh;
+}
+.services{
+    padding: 10rem;
+}
+
+.prices{
+    flex-direction: column;
+    gap: 0rem;
+}
+.service-btr-price, .service-ha-price{
+    height: 61dvh;
+    width: 40dvh;
+}
+.service-ha-price{
+    height: 70dvh;
+}
+
+.service-btr-price h2, .service-ha-price h2{
+    font-size: 1.8dvh;
+}
+
+.socials{
+    flex-direction: column;
+}
+}
+
+@media (max-width:345px){
+
+.sub-menu{
+    width: 10dvh;
+    height: fit-content;
+}
+
+.header-nav{
+    width: 30dvh;
+    right: 8.9rem;
+}
+
+.text-overlay{
+    left: 3dvh;
+}
+.text-overlay p{
+    margin: 0;
+}
+.small{
+    font-size: 3dvh;
+}
+.medium{
+    font-size: 3.2dvh;
+}
+.large{
+    font-size: 3.7dvh;
+}
+.offer-items{
+    margin-bottom: -25rem;
+}
+.offer-items ul{
+    flex-direction: column;
+    gap: 4rem;
+    padding: 2rem;
+}
+.offer-items-text{
+    position: relative;
+    flex-direction: column;
+    bottom: 21rem;
+    gap: 12rem;
+}
+
+.story{
+    margin: 3rem 1rem;
+    padding: 1rem;
+}
+.story p{
+    font-size: .9rem;
+}
+.story h1{
+    font-size: 2.1rem;
+    margin-top: 0;
+}
+
+.service-ha, .service-btr{
+    width: 20dvh;
+}
+.service-ha p, .service-btr p{
+    font-size: .9rem;
+}
+
+.service-button{
+    height: 6dvh;
+    font-size: 1rem;
+}
+.services{
+    padding: 3rem;
+}
+.prices{
+    flex-direction: column;
+    gap: 8dvh;
+}
+.service-btr-price, .service-ha-price{
+    height: 55dvh;
+    width: 20dvh;
+}
+.service-btr-price{
+    bottom: 1.3rem;
+}
+.service-ha-price{
+    top: 3.54rem;
+    height: 62dvh;
+}
+
+.service-btr-price h1, .service-ha-price h1{
+    font-size: 1.4rem;
+}
+.service-btr-price h2, .service-ha-price h2{
+    font-size: .8rem;
+}
+.service-btr-price h3, .service-ha-price h3{
+    font-size: .9rem;
+    padding: 1rem;
+}
+.note{
+    font-size: .4rem;
+}
+
+.slider{
+    padding: 2rem 1dvh;
+}
+.social-slider img{
+    width: 15dvh;
+}
+
+.footer{
+    flex-direction: column;
+    height: 80dvh;
+}
+.footer-logo img{
+    height: 10dvh;
+    width: 30dvh;
+}
+.footer-logo{
+    padding: 0 2dvh;
+}
+.footer-menu{
+    font-size: .8rem;
+    transform: translate(-23dvh,1dvh);
+}
+.footer-contact-us{
+    font-size: .8rem;
+    transform: translate(2.8rem,1.5rem);
+}
+.footer iframe{
+    height: 30dvh;
+    width: 25dvh;
+}
+.policies{
+    font-size: .35rem;
 }
 }
