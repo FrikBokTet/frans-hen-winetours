@@ -96,9 +96,13 @@ body{
     border-radius: 10px;
 }
 .socials {
-    font-size: 4px;
+    font-size: 6px;
     display: flex;
     gap:10px;
+}
+.socials a{
+    color: #328053;
+    text-decoration: none;
 }
 
 /*Body Attraction*/
@@ -818,7 +822,7 @@ body{
 }
 }
 
-@media (max-width:610px){
+@media (max-width:610px) {
 .text-overlay{
     height: 15dvh;
 }    
@@ -917,9 +921,13 @@ body{
     height: fit-content;
 }
 
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .header-nav{
     width: 30dvh;
-    right: 8.9rem;
 }
 
 .text-overlay{
@@ -970,6 +978,9 @@ body{
 .service-ha p, .service-btr p{
     font-size: .9rem;
 }
+.service-ha h1, .service-btr h1{
+    margin: 0;
+}
 
 .service-button{
     height: 6dvh;
@@ -978,20 +989,21 @@ body{
 .services{
     padding: 3rem;
 }
+
 .prices{
     flex-direction: column;
-    gap: 8dvh;
+    gap: 10rem;
 }
 .service-btr-price, .service-ha-price{
-    height: 55dvh;
+    height: 60dvh;
     width: 20dvh;
 }
 .service-btr-price{
-    bottom: 1.3rem;
+    bottom: 2.6dvh;
 }
 .service-ha-price{
-    top: 3.54rem;
-    height: 62dvh;
+    top: 15.5dvh;
+    height: 70dvh;
 }
 
 .service-btr-price h1, .service-ha-price h1{
@@ -1006,10 +1018,6 @@ body{
 }
 .note{
     font-size: .4rem;
-}
-
-.slider{
-    padding: 2rem 1dvh;
 }
 .social-slider img{
     width: 15dvh;
@@ -1040,5 +1048,47 @@ body{
 }
 .policies{
     font-size: .35rem;
+}
+
+.about-us-content{
+    transform: translate(-1rem);
+}
+.about-us-text{
+    height: 40dvh;
+    width: 20dvh;
+    font-size: 3vw;
+}
+
+.about-us-images{
+    display: none;
+}
+
+.bottom-block{
+    padding: 1rem;
+    font-size: 4vw;
+}
+
+.footer-logo{
+    display: flex;
+    justify-content: center;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: center;
+}
+.footer-menu{
+    padding: 0;
+    transform: translate(0);
+}
+.footer-nav li{
+    margin: 0;
+}
+.footer-contact-us{
+    transform: translateX(4rem);
+}
+
+.slider img{
+    width: 100%;
 }
 }
